@@ -3,7 +3,6 @@ const app = express()
 const session = require('express-session')
 
 const PORT = 3000;
-const serveStatic = require('serve-static')
 const indexRoutes = require('./routes/index.js')
 
 app.set('view engine', 'ejs')

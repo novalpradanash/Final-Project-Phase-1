@@ -6,11 +6,7 @@ class Controller {
 
 
     static getLoginAdmin ( req, res ) {
-        res.render('admins/login', {
-            // title: ""
-            
-
-        })
+        res.render('admins/login')
     }
 
     static postLoginAdmin ( req, res ) {
