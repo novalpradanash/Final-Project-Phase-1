@@ -1,20 +1,20 @@
 'use strict';
 const express = require('express')
 const router = express.Router()
-const Controller = require('../controllers/memberC.js')
+const Controller = require('../controllers/adminC.js')
 
-//Members Page
-router.get('/', (Controller.showData))
+//Login Page
+router.get('/', (Controller.getLoginAdmin))
 
-//Add-Members Page
-router.get('/add', (Controller.getFormAdd))
-router.post('/add', (Controller.addData))
+//login page
+router.get('/login', (Controller.getLoginAdmin))
+router.post('/login', (Controller.postLoginAdmin))
 
-//Edit-Members Page
-router.get('/edit/:id', (Controller.getFormEdit))
-router.post('/edit/:id', (Controller.editData))
+//register page
+router.get('/register', (Controller.getRegisterAdmin))
+router.post('/register', (Controller.postRegisterAdmin))
 
-//Delete-Members Page
-router.get('/delete/:id', (Controller.deleteData))
+//logout 
+router.post('/register', (Controller.getLogoutAdmin))
 
 module.exports = router

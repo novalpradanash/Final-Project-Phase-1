@@ -8,10 +8,10 @@ const members = require('./members')
 const transactions = require('./transactions') 
 
 //require controller
-const Controller = require('../controllers/loginC.js')
+const Controller = require('../controllers/adminC.js')
 
 //Home Page (Login Interface)
-router.get('/', (Controller.getLoginForm))
+router.get('/', (Controller.getLoginAdmin))
 
 router.use('/admins', admins)
 router.use('/books', books)
