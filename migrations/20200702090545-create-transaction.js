@@ -8,29 +8,18 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      // memberId: {
-      //   allowNull: false,
-      //   type: Sequelize.INTEGER,
-      //   references: {
-      //     model: 'Members',
-      //     key: 'id'
-      //   },
-      //   onDelete: 'cascade',
-      //   onUpdate: 'cascade'
-      // },
-      // bookId: {
-      //   allowNull: false,
-      //   type: Sequelize.INTEGER,
-      //   references: {
-      //     model: 'Books',
-      //     key: 'id'
-      //   },
-      //   onDelete: 'cascade',
-      //   onUpdate: 'cascade'
-      // },
+      MemberId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        
+      },
+      BookId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+      },
       borrowed_date: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
