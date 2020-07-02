@@ -1,0 +1,54 @@
+body {
+	margin-left: 8%;
+	margin-top: 20px;
+	background-color: black;
+	margin-right: 8%;
+}
+body, .header, .nav, .samping, .footer{
+	border: 1px solid white;
+}
+
+.header{
+	width: 100%;
+	padding: 2px 0px 2px 0px;
+	background-color: darkblue;
+	text-align: center;
+	color: white;
+}
+.header h3{
+	font-style: italic;
+}
+.nav{
+	background-color: #f18f01;
+	width: 100%;
+	padding: 2 0 2 0;
+	text-align: center;
+	color: black;
+	height: 50px;
+}
+.samping {
+	background-color: aqua;
+	float: left;
+	height: 350px;
+	width: 19%;
+}
+
+.samping a{
+	color: black;
+	text-decoration: none;
+}
+.isi{
+	float: center;
+	height: 350px;
+	border: 1px solid white;
+	color:	black;
+	background-color: white;
+	padding-left: 7px;
+}
+.footer{
+	background-color: darkblue;
+	color: white;
+	text-align: center;
+	width: 100%;
+	clear: both;
+}

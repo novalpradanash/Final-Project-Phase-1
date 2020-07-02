@@ -3,17 +3,19 @@ const router = express.Router()
 
 //router
 const books = require('./books') 
-const admins = require('./admins') 
+const admin = require('./admin') 
 const members = require('./members') 
 const transactions = require('./transactions') 
 
 //require controller
-const homeC = require('../controllers/homeC.js')
+const Controller = require('../controllers/loginC.js')
 
-// router.get('/', )
-// router.use('/admins', admins)
-// router.use('/books', books)
-// router.use('/members', members)
-// router.use('/transactions', transactions)
+//Home Page (Login Interface)
+router.get('/', (Controller.getLoginForm))
+
+router.use('/admin', admin)
+router.use('/books', books)
+router.use('/members', members)
+router.use('/transactions', transactions)
 
 module.exports = router

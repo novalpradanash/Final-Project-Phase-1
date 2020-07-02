@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hacktiv8 Library</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<div class="header">
+		<h2>Hacktiv8 Library</h2>
+	</div>
+	
+	<div class="nav">
+		<p>Jadwal Buka : Senin - Kamis (08.00 - 16.00) & Jum'at - Sabtu (08.00 - 13.00)</p>
+	</div>
+	
+	<div class="samping">
+		<ul>
+			<br><br><br>
+			<a href="../admin.html">HOME</a>
+			<br><br><br>
+			<a href="transaksi.html">KEMBALI</a>
+		</ul>
+	</div>
+	
+	<div class="isi">
+		<center>
+			<h3>Tambah Transaksi Peminjaman</h3>
+			<form action="#">
+				<table>
+					<tr>
+						<td>Nama Peminjam</td>
+						<td>:</td>
+						<td><input type="text" name="peminjam"></td>
+					</tr>
+					
+					<tr>
+						<td>Buku</td>
+						<td>:</td>
+						<td><input type="text" name="buku"></td>
+					</tr>
+					
+					<tr>
+						<td>Tanggal Pinjam</td>
+						<td>:</td>
+						<td><input type="text" name="tgl_pinjam"></td>
+					</tr>
+					
+					<tr>
+						<td>Tanggal Kembali</td>
+						<td>:</td>
+						<td><input type="text" name="tgl_kembali"></td>
+					</tr>
+					
+					<tr>
+						<td>Status</td>
+						<td>:</td>
+						<td>
+							<select id="status" >
+								<option value="Sedang Meminjam">Sedang Meminjam</option>
+								<option value="Sudah Mengembalikan">Sudah Mengembalikan</option>
+						</td>
+					</tr>
+					
+					<tr>
+						<td></td><td></td>
+						<td><input type="submit" name="tambah" value="TAMBAH"></td>
+					</tr>
+					
+				</table>
+			</form>
+		</center>
+	</div>
+	
+	<div class="footer">
+		<h4>&trade; Hacktiv8 KG-01-Agile Fox </h4>
+	</div>
+</body>
+</html>
