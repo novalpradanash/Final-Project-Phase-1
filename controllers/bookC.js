@@ -1,22 +1,37 @@
 const { Book } = require('../models/index')
+const { isLoggedIn } = require('../helpers/controllerHelpers.js')
 
 class Controller {
 
     static showData(req, res) {
+
         Book.findAll()
         .then(data => {
-            res.render('books/books', {
-            listBooks : data
-            })
+
+            if (req.session.isLoggedIn) {
+                res.render('books/books', {
+                    listBooks : data
+                    })
+            }
+            else {
+                res.redirect('/admins')
+            }
         })
         .catch(err => {
+            console.log(err)
             res.send(err)
         })
     }
 
 
     static getFormAdd(req, res) {
-        res.render('books/add')
+        
+        if (req.session.isLoggedIn) {
+            res.render('books/add', {title:"Tambah Buku"})
+        }
+        else {
+            res.redirect('/admins')
+        }
     }
 
 
@@ -57,9 +72,15 @@ class Controller {
             }
         })
         .then (data => {
-            res.render('books/edit', {
-                listBooks: data
-            })
+            if (req.session.isLoggedIn) {
+                res.render('books/edit', {
+                    listBooks: data
+                })
+            }
+            else {
+                res.redirect('/admins')
+            }
+            
         })
     }
 
@@ -90,7 +111,13 @@ class Controller {
                     }
                 })
             .then (data => {
-                res.redirect('/books')
+                if (req.session.isLoggedIn) {
+                    res.redirect('/books')
+                }
+                else {
+                    res.redirect('/admins')
+                }
+                
             })
             .catch(err => {
                 res.send(err)
@@ -109,7 +136,12 @@ class Controller {
           }
         })
           .then(data => {
-            res.redirect('/books')
+              if (req.session.isLoggedIn) {
+                res.redirect('/books')
+            }
+            else {
+                res.redirect('/admins')
+            }
           })
     }
 

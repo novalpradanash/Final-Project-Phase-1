@@ -5,9 +5,15 @@ class Controller {
     static showData(req, res) {
         Member.findAll()
         .then(data => {
-            res.render('members/members', {
-            listMembers: data
-            })
+
+            if (req.session.isLoggedIn) {
+                res.render('members/members', {
+                    listMembers: data
+                    })
+            }
+            else {
+                res.redirect('/admins')
+            }
         })
         .catch(err => {
             res.send(err)
@@ -16,7 +22,13 @@ class Controller {
 
 
     static getFormAdd(req, res) {
-        res.render('members/add')
+        
+        if (req.session.isLoggedIn) {
+            res.render('members/add')
+        }
+        else {
+            res.redirect('/admins')
+        }
     }
 
 
@@ -56,9 +68,15 @@ class Controller {
             }
         })
         .then (data => {
-            res.render('members/edit', {
-                listMembers: data
-            })
+            if (req.session.isLoggedIn) {
+                res.render('members/edit', {
+                    listMembers: data
+                })
+            }
+            else {
+                res.redirect('/admins')
+            }
+
         })
     }
 
@@ -107,8 +125,14 @@ class Controller {
           }
         })
           .then(data => {
-            res.redirect('/members')
+            if (req.session.isLoggedIn) {
+                res.redirect('/members')
+            }
+            else {
+                res.redirect('/admins')
+            }
           })
+
     }
 
 }

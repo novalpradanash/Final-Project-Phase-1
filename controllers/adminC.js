@@ -1,5 +1,6 @@
 const { Admin } = require('../models/index.js')
 const bcryptjs = require('bcryptjs')
+// const session = require('express-session')
 
 class Controller {
 
@@ -23,7 +24,12 @@ class Controller {
             return bcryptjs.compare(d.password, data.password)
         })
         .then(data => {
+
+            
             if(data) {
+                // session.
+                req.session.isLoggedIn = true
+                // console.log(req.session.isLoggedIn)
                 res.send("Berhasil login")
             }
             else {
@@ -74,7 +80,8 @@ class Controller {
     }
 
     static getLogoutAdmin ( req, res ) {
-
+        req.session.destroy()
+        res.redirect('login')
     }
 
 }
