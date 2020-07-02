@@ -19,7 +19,8 @@ module.exports = (sequelize, DataTypes) => {
     isbn: DataTypes.STRING,
     released_year: DataTypes.INTEGER,
     author: DataTypes.STRING,
-    genre: DataTypes.STRING
+    genre: DataTypes.STRING,
+    stock: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Book',
