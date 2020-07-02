@@ -2,7 +2,7 @@ const { Book , Member } =  require('../models/index')
 class Controller {
 
     static showData(req, res) {
-
+        
     }
 
     static getFormAdd(req, res) {

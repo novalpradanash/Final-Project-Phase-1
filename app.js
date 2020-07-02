@@ -2,12 +2,13 @@ const express = require('express');
 const app = express()
 
 const PORT = 3000;
-
+const serveStatic = require('serve-static')
 const indexRoutes = require('./routes/index.js')
 
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({extended:true}))
 
+app.use(express.static('assets'))
 
 app.use('/', indexRoutes)
 
