@@ -15,6 +15,6 @@ router.get('/register', (Controller.getRegisterAdmin))
 router.post('/register', (Controller.postRegisterAdmin))
 
 //logout 
-router.post('/register', (Controller.getLogoutAdmin))
+router.get('/logout', (Controller.getLogoutAdmin))
 
 module.exports = router

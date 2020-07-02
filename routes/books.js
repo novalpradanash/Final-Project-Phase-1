@@ -4,6 +4,7 @@ const router = express.Router()
 const Controller = require('../controllers/bookC.js')
 
 //Books Page
+router.get('/', (Controller.showData))
 router.get('/books', (Controller.showData))
 
 //Add-books Page
