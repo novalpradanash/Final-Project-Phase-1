@@ -3,7 +3,7 @@ const router = express.Router()
 
 //router
 const books = require('./books') 
-const admin = require('./admin') 
+const admins = require('./admins') 
 const members = require('./members') 
 const transactions = require('./transactions') 
 
@@ -13,7 +13,7 @@ const Controller = require('../controllers/loginC.js')
 //Home Page (Login Interface)
 router.get('/', (Controller.getLoginForm))
 
-router.use('/admin', admin)
+router.use('/admins', admins)
 router.use('/books', books)
 router.use('/members', members)
 router.use('/transactions', transactions)

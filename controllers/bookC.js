@@ -1,10 +1,19 @@
+const { Book } = require('../models/index')
+
 class Controller {
 
     static showData(req, res) {
+        Book.findAll()
+            .then(data => {
+                
+            })
 
     }
 
-    static getFromAdd(req, res) {
+    static getFormAdd(req, res) {
+        res.render('books/add', {
+            title: "Tambah Data"
+        })
 
     }
 

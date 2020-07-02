@@ -4,7 +4,7 @@ class Controller {
 
     }
 
-    static getFromAdd(req, res) {
+    static getFormAdd(req, res) {
 
     }
 
