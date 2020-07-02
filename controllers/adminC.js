@@ -5,6 +5,13 @@ const bcryptjs = require('bcryptjs')
 class Controller {
 
 
+    static getIndex ( req, res ) {
+        if (req.session.isLoggedIn) {
+            res.render('index')
+        }
+        else {
+        }
+    }
     static getLoginAdmin ( req, res ) {
         res.render('admins/login', {
             // title: ""
@@ -29,8 +36,7 @@ class Controller {
             if(data) {
                 // session.
                 req.session.isLoggedIn = true
-                // console.log(req.session.isLoggedIn)
-                res.send("Berhasil login")
+                res.redirect('/')
             }
             else {
                 res.redirect('/admins/login')
