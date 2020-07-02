@@ -4,7 +4,7 @@ const router = express.Router()
 const Controller = require('../controllers/adminC.js')
 
 //Login Page
-router.get('/', (Controller.getLoginAdmin))
+router.get('/index', (Controller.getLoginAdmin))
 
 //login page
 router.get('/login', (Controller.getLoginAdmin))
@@ -15,6 +15,6 @@ router.get('/register', (Controller.getRegisterAdmin))
 router.post('/register', (Controller.postRegisterAdmin))
 
 //logout 
-router.post('/register', (Controller.getLogoutAdmin))
+router.post('/logout', (Controller.getLogoutAdmin))
 
 module.exports = router

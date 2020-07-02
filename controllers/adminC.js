@@ -10,6 +10,7 @@ class Controller {
             res.render('index')
         }
         else {
+            res.redirect('/admins/login')
         }
     }
     static getLoginAdmin ( req, res ) {

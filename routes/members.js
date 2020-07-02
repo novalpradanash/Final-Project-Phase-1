@@ -6,6 +6,7 @@ const Controller = require('../controllers/memberC.js')
 //Members Page
 router.get('/', (Controller.showData))
 
+
 //Add-Members Page
 router.get('/add', (Controller.getFormAdd))
 router.post('/add', (Controller.addData))
