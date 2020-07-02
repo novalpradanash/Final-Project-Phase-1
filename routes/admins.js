@@ -4,7 +4,7 @@ const router = express.Router()
 const Controller = require('../controllers/adminC.js')
 
 //Login Page
-router.get('/index', (Controller.getLoginAdmin))
+router.get('/', (Controller.getLoginAdmin))
 
 //login page
 router.get('/login', (Controller.getLoginAdmin))

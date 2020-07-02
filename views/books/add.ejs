@@ -26,7 +26,7 @@
 	<div class="isi">
 		<center>
 			<h3><%= title %></h3>
-			<form action="/books/add">
+			<form action="/books/add" method="POST">
 				<table>
 					<tr>
 						<td>Book ID</td>
@@ -62,6 +62,12 @@
 						<td>Genre</td>
 						<td>:</td>
 						<td><input type="text" name="genre" id="genre"></td>
+					</tr>
+
+					<tr>
+						<td>Stock</td>
+						<td>:</td>
+						<td><input type="text" name="stock" id="stock"></td>
 					</tr>
 
 					<tr>
