@@ -16,8 +16,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Transaction.init({
-    memberId: DataTypes.INTEGER,
-    bookId: DataTypes.INTEGER,
+    MemberId: DataTypes.INTEGER,
+    BookId: DataTypes.INTEGER,
     borrowed_date: DataTypes.INTEGER
   }, {
     sequelize,

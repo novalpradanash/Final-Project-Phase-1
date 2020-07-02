@@ -2,7 +2,15 @@ const { Book , Member , Transaction } =  require('../models/index')
 class Controller {
 
     static showData(req, res) {
-        
+        Transaction.findAll()
+        .then(data => {
+          res.render('transactions/transaction', {
+            listTransaction : data
+          })
+        })
+        .catch(err => {
+          console.log(err)
+        })
     }
 
     static getFormAdd(req, res) {

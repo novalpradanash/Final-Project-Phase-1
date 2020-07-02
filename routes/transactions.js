@@ -10,9 +10,9 @@ router.get('/', (Controller.showData))
 router.get('/add', (Controller.getFormAdd))
 router.post('/add', (Controller.addData))
 
-//Edit-Transaction Page
-router.get('/edit/:id', (Controller.getFormEdit))
-router.post('/edit/:id', (Controller.editData))
+//Detail-Transaction Page
+router.get('/detail/:id', (Controller.getFormEdit))
+router.post('/detail/:id', (Controller.editData))
 
 //Delete-Transaction Page
 router.get('/delete/:id', (Controller.deleteData))

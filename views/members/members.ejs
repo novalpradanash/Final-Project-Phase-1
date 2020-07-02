@@ -35,18 +35,17 @@
 					<th width="10%" colspan="2">Action</th>
 				</tr>
 		
-				<!-- Awal pemasukan data -->
+
 				<% listMembers.forEach(el => { %>
 
 					<tr>
 						<td><center><%= el.id %></center></td>
-						<td><%= el.name %></td> <!-- data NAMA -->
-						<td><%= el.address %></td> <!-- data ALAMAT-->
-						<td><%= el.phone_number %></td> <!-- data ALAMAT-->
+						<td><%= el.name %></td>
+						<td><%= el.address %></td>
+						<td><%= el.phone_number %></td>
 						<td><a href="/members/edit/<%= el.id %>">Edit</a></td>
 						<td><a href="/members/delete/<%= el.id %>">Delete</a></td>
 					</tr>
-					<!-- Akhir pemasukan data -->
 				<% }) %>
 
 			</table>

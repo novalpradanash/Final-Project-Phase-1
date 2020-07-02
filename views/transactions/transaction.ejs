@@ -17,36 +17,34 @@
 	<div class="samping">
 		<ul>
 			<br><br><br>
-			<a href="../admin.html">HOME</a>
-			<br><br><br>
-			<a href="transaksi-entry.html">TAMBAH</a>
+			<a href="/">HOME</a>
 		</ul>
 	</div>
 	
 	<div class="isi">
 		<center>
 			<center>
-				<h3>DAFTAR PEMINJAMAN & PENGEMBALIAN</h3>
+				<h3>TRANSACTION</h3>
 				<table border="1">
 					<tr>
 						<th width="5%">NO</th>
-						<th>Members Name</th>
-						<th>Books Name</th>
+						<th>Books ID</th>
+						<th>Members ID</th>
+						<th>Borrowed Date</th>
 						<th width="10%" colspan="2">Action</th>
 					</tr>
 					
-					<!-- Awal pemasukan data -->
-					<tr>
-						<td><center>1</center></td>
-						<td></td> <!--data nama peminjam-->
-						<td></td> <!--data nama Buku-->
-						<td></td> <!--data tanggal pinjam-->
-						<td></td> <!--data tanggal kembali-->
-						<td></td> <!--status (meminjam/sudah mengembalikan)-->
-						<td>Edit</td>
-						<td>Detail</td>
-					</tr>
-					<!-- Akhir pemasukan data -->
+					<% listTransaction.forEach(el => { %>
+
+						<tr>
+							<td><center><%= el.id %></center></td>
+							<td><%= el.BookId %></td>
+							<td><%= el.MemberId %></td>
+							<td><%= el.borrowed_date %></td>
+							<td><a href="/members/detail/<%= el.id %>">Edit</a></td>
+							<td><a href="/members/delete/<%= el.id %>">Delete</a></td>
+						</tr>
+					<% }) %>
 					
 				</table>
 			</center>

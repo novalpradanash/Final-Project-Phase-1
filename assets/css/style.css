@@ -39,7 +39,7 @@ body, .header, .nav, .samping, .footer{
 }
 .isi{
 	float: center;
-	height: 350px;
+	height: 400px;
 	border: 1px solid white;
 	color:	black;
 	background-color: white;

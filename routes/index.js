@@ -16,6 +16,6 @@ router.get('/', (Controller.getIndex))
 router.use('/admins', admins)
 router.use('/books', books)
 router.use('/members', members)
-router.use('/transactions', transactions)
+router.use('/transaction', transactions)
 
 module.exports = router
