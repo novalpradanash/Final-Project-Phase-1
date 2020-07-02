@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Unlocking Android",
+        "isbn": "1933988673",
+        "released_year": 2009,
+        "author": "W. Frank Ableson, Charlie Collins, Robi Sen",
+        "genre": "Open Source, Mobile"
+    },
+    {
+        "name": "Android in Action, Second Edition",
+        "isbn": "1935182722",
+        "released_year": 2011,
+        "author": "W. Frank Ableson, Robi Sen",
+        "genre": "Java"
+    },
+    {
+        "name": "Specification by Example",
+        "isbn": "1617290084",
+        "released_year": 20011,
+        "author": "Gojko Adzic",
+        "genre": "Software Engineering"
+    },
+    {
+        "name": "Flex 3 in Action",
+        "isbn": "1933988746",
+        "released_year": 2009,
+        "author": "Tariq Ahmed, Jon Hirschi, Faisal Abid",
+        "genre": "Internet"
+    },
+    {
+        "name": "Flex 4 in Action",
+        "isbn": "1935182420",
+        "released_year": 2010,
+        "author": "Tariq Ahmed, Dan Orlando, John C. Bland II, Joel Hooks",
+        "genre": "Internet"
+    },
+    {
+        "name": "Collective Intelligence in Action",
+        "isbn": "1933988312",
+        "released_year": 2008,
+        "author": "Satnam Alag",
+        "genre": "Internet"
+    },
+    {
+        "name": "Zend Framework in Action",
+        "isbn": "1933988320",
+        "released_year": 2008,
+        "author": "Rob Allen, Nick Lo, Steven Brown",
+        "genre": "Web Development"
+    },
+    {
+        "name": "Flex on Java",
+        "isbn": "1933988797",
+        "released_year": 2010,
+        "author": "Bernerd Allmon, Jeremy Anderson",
+        "genre": "Internet"
+    },
+    {
+        "name": "Griffon in Action",
+        "isbn": "1935182234",
+        "released_year": 2012,
+        "author": "Andres Almiray, Danno Ferrin, James Shingler",
+        "genre": "Java"
+    },
+    {
+        "name": "OSGi in Depth",
+        "isbn": "193518217X",
+        "released_year": 2011,
+        "author": "Alexandre de Castro Alves",
+        "genre": "Java"
+    }
+]
