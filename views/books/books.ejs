@@ -23,30 +23,32 @@
 		</ul>
 	</div>
 	
-	<div class="isi">
+	<div class="isi" style="overflow-y: scroll; height:400px;">
 		<center>
-			<h3>Daftar Buku</h3>
+			<h3>Book List</h3>
 			<table border="1">
 				<tr>
 					<th width="5%">ID</th>
-					<th>JUDUL</th>
-					<th>PENULIS</th>
-					<th>TAHUN</th>
-					<th>PENERBIT</th>
+					<th>Name</th>
+					<th>ISBN</th>
+					<th>Released Year</th>
+					<th>Author</th>
+					<th>Genre</th>
+					<th>Stock</th>
 					<th width="10%" colspan="2">Action</th>
 				</tr>
 				
-				<!-- Awal pemasukan data-->
-				<tr>
-					<td><Center>1</center></td> <!-- data ID BUKU -->
-					<td></td> <!-- data JUDUL -->
-					<td></td> <!-- data PENULIS -->
-					<td></td> <!-- data TAHUN -->
-					<td></td> <!-- data PENERBIT -->
-					<td>Edit</td>
-					<td>Delete</td>
-				</tr>
-				<!-- Akhir pemasukan data-->
+				<% for (let i=0; i < listBooks.length; i++) { %>
+					<tr>
+					  <td><%= listBooks[i].id %></td>
+					  <td><%= listBooks[i].name %></td>
+					  <td><%= listBooks[i].isbn %></td>
+					  <td><%= listBooks[i].released_year %></td>
+					  <td><%= listBooks[i].author %></td>
+					  <td><%= listBooks[i].genre %></td>
+					  <td><%= listBooks[i].stock %></td>
+					</tr>
+				<% } %>
 				
 			</table>
 		</center>
