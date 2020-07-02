@@ -42,7 +42,8 @@ class Controller {
             isbn: req.body.isbn,
             released_year: req.body.released_year,
             author: req.body.author,
-            genre: req.body.genre
+            genre: req.body.genre,
+            stock: req.body.stock
         }
         for (let key in objBook) {
             if (objBook[key] === '') {

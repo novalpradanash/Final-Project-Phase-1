@@ -26,41 +26,47 @@
 	<div class="isi">
 		<center>
 			<h3><%= title %></h3>
-			<form action="#">
+			<form action="/books/add">
 				<table>
 					<tr>
-						<td>ID Buku</td>
+						<td>Book ID</td>
 						<td>:</td>
-						<td><input type="text" name="id"></td>
+						<td><input type="text" name="id" id="id"></td>
 					</tr>
 					
 					<tr>
-						<td>Judul</td>
+						<td>Name</td>
 						<td>:</td>
-						<td><input type="text" name="judul"></td>
+						<td><input type="text" name="name" id="name"></td>
 					</tr>
 					
 					<tr>
-						<td>Penulis</td>
+						<td>ISBN</td>
 						<td>:</td>
-						<td><input type="text" name="penulis"></td>
+						<td><input type="text" name="isbn" id="isbn"></td>
 					</tr>
 					
 					<tr>
-						<td>Tahun Terbit</td>
+						<td>Released Year</td>
 						<td>:</td>
-						<td><input type="number" name="tahun"></td>
+						<td><input type="text" name="released_year" id="released_year"></td>
 					</tr>
 					
 					<tr>
-						<td>Penerbit</td>
+						<td>Author</td>
 						<td>:</td>
-						<td><input type="text" name="penerbit"></td>
+						<td><input type="text" name="author" id="author"></td>
 					</tr>
 					
+					<tr>
+						<td>Genre</td>
+						<td>:</td>
+						<td><input type="text" name="genre" id="genre"></td>
+					</tr>
+
 					<tr>
 						<td></td><td></td>
-						<td><input type="submit" name="tambah" value="TAMBAH"></td>
+						<td><button type="submit">Add Book</button></td>
 					</tr>
 					
 				</table>
