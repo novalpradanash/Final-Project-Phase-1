@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hacktiv8 Library</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>">
+</head>
+<body>
+	<div class="header">
+		<h2>Hacktiv8 Library</h2>
+	</div>
+	
+	<div class="nav">
+		<p>Jadwal Buka : Senin - Kamis (08.00 - 16.00) & Jum'at - Sabtu (08.00 - 13.00)</p>
+	</div>
+	
+	<div class="samping">
+		<ul>
+			<br><br><br>
+			<a href="/">HOME</a>
+			<br><br><br>
+			<a href="/books">BACK</a>
+		</ul>
+	</div>
+	
+	<div class="isi">
+		<center>
+			<h3>Edit Book</h3>
+			<form action="/books/add" method="POST">
+				<table>
+					<tr>
+						<td>Book ID</td>
+						<td>:</td>
+						<td><input type="text" name="id" id="id" value="<%= listBooks.id %>"></td>
+					</tr>
+					
+					<tr>
+						<td>Name</td>
+						<td>:</td>
+						<td><input type="text" name="name" id="name" value="<%= listBooks.name %>"></td>
+					</tr>
+					
+					<tr>
+						<td>ISBN</td>
+						<td>:</td>
+						<td><input type="text" name="isbn" id="isbn" value="<%= listBooks.isbn %>"></td>
+					</tr>
+					
+					<tr>
+						<td>Released Year</td>
+						<td>:</td>
+						<td><input type="text" name="released_year" id="released_year" value="<%= listBooks.released_year %>"></td>
+					</tr>
+					
+					<tr>
+						<td>Author</td>
+						<td>:</td>
+						<td><input type="text" name="author" id="author" value="<%= listBooks.author %>"></td>
+					</tr>
+					
+					<tr>
+						<td>Genre</td>
+						<td>:</td>
+						<td>
+                            <div>
+                                <select name="genre" id="genre">
+                                    <option value="Animation" <%= listBooks.genre === 'Comic' ? 'selected' : '' %> >Comic</option>
+                                    <option value="Comedy" <%= listBooks.genre === 'Comedy' ? 'selected' : '' %> >Comedy</option>
+                                    <option value="Novel" <%= listBooks.genre === 'Novel' ? 'selected' : '' %> >Novel</option>
+                                    <option value="Horror" <%= listBooks.genre === 'Horror' ? 'selected' : '' %> >Horror</option>
+                                    <option value="Religious" <%= listBooks.genre === 'Religious' ? 'selected' : '' %> >Religious</option>
+                                    <option value="Thriller" <%= listBooks.genre === 'Thriller' ? 'selected' : '' %> >Thriller</option>
+                                </select>
+                              </div>
+                        </td>
+					</tr>
+
+					<tr>
+						<td>Stock</td>
+						<td>:</td>
+						<td><input type="number" min="0" name="stock" id="stock" value="<%= listBooks.stock %>"></td>
+					</tr>
+
+					<tr>
+						<td></td><td></td>
+						<td><button type="submit">Edit Book</button></td>
+					</tr>
+					
+				</table>
+			</form>
+		</center>
+	</div>
+
+	<div class="footer">
+		<h4>&trade; Hacktiv8 KG-01-Agile Fox </h4>
+	</div>
+</body>
+</html>

@@ -61,13 +61,25 @@
 					<tr>
 						<td>Genre</td>
 						<td>:</td>
-						<td><input type="text" name="genre" id="genre" value=""></td>
+						<td>
+							<div>
+								<select name="genre" id="genre">
+								  <option id="genre" value='default' selected>Select the Genre</option>
+								  <option id="genre" value='Comic'>Comic</option>
+								  <option id="genre" value='Comedy'>Comedy</option>
+								  <option id="genre" value='Novel'>Novel</option>
+								  <option id="genre" value='Horror'>Horror</option>
+								  <option id="genre" value='Religious'>Religious</option>
+								  <option id="genre" value='Thriller'>Thriller</option>
+								</select>
+							  </div>
+						</td>
 					</tr>
 
 					<tr>
 						<td>Stock</td>
 						<td>:</td>
-						<td><input type="text" name="stock" id="stock"></td>
+						<td><input type="number" min="0" name="stock" id="stock"></td>
 					</tr>
 
 					<tr>

@@ -5,7 +5,11 @@ class Controller {
 
     static showData(req, res) {
 
-        Book.findAll()
+        Book.findAll({
+            order: [
+                ['name', 'ASC']
+            ]
+        })
         .then(data => {
 
             if (req.session.isLoggedIn) {
@@ -131,7 +135,7 @@ class Controller {
     static deleteData(req, res) {
         const idInput = req.params.id
 
-        Books.destroy({
+        Book.destroy({
           where: {
             id: idInput
           }
