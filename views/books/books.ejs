@@ -47,6 +47,10 @@
 					  <td><%= listBooks[i].author %></td>
 					  <td><%= listBooks[i].genre %></td>
 					  <td><%= listBooks[i].stock %></td>
+					  <td>
+						<a href="/books/edit/<%=listBooks[i].id %>">Edit</a> |
+						<a href="/books/delete/<%=listBooks[i].id %>" onclick="return confirm('Deleting data, are you sure?')">Delete</a>
+					  </td>
 					</tr>
 				<% } %>
 				
