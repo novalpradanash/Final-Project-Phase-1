@@ -11,7 +11,7 @@ const transactions = require('./transactions')
 const Controller = require('../controllers/adminC.js')
 
 //Home Page (Login Interface)
-router.get('/', (Controller.getLoginAdmin))
+router.get('/', (Controller.getIndex))
 
 router.use('/admins', admins)
 router.use('/books', books)
