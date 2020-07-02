@@ -26,25 +26,25 @@
 	<div class="isi">
 		<center>
 		<h3>Tambah Anggota</h3>
-			<form action="/members/add" method="POST">
+			<form action="/members/edit/<%= dataMember.id %>" method="POST">
 				<table>
 
 					<tr>
 					<td>NAMA</td>
 						<td>:</td>
-						<td><input type="text" name="name"></td>
+						<td><input type="text" name="name" value="<%= dataMember.name %>"></td>
 					</tr>
 						
 					<tr>
 						<td>ALAMAT</td>
 						<td>:</td>
-						<td><input type="text" name="address"></td>
+						<td><input type="text" name="address" value="<%= dataMember.address %>"></td>
 					</tr>
 						
 					<tr>
 						<td>NO. KONTAK</td>
 						<td>:</td>
-						<td><input type="text" name="phone_number"></td>
+						<td><input type="text" name="phone_number" value="<%= dataMember.phone_number %>"></td>
 					</tr>
 						
 					<tr>

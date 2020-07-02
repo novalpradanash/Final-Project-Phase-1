@@ -3,7 +3,9 @@ const { Member } = require('../models/index')
 class Controller {
 
     static showData(req, res) {
-        Member.findAll()
+        Member.findAll({
+            order: [['name', 'ASC']]
+        })
         .then(data => {
 
             if (req.session.isLoggedIn) {
@@ -36,7 +38,6 @@ class Controller {
         let error = 0
         let objMember = {
             name: req.body.name,
-            email: req.body.email,
             address: req.body.address,
             phone_number: req.body.phone_number
         }
@@ -70,7 +71,7 @@ class Controller {
         .then (data => {
             if (req.session.isLoggedIn) {
                 res.render('members/edit', {
-                    listMembers: data
+                    dataMember: data
                 })
             }
             else {
@@ -83,10 +84,10 @@ class Controller {
 
 
     static editData(req, res) {
+        let error = 0
         const idInput = req.params.id
         let objMember = {
             name: req.body.name,
-            email: req.body.email,
             address: req.body.address,
             phone_number: req.body.phone_number
         }
@@ -119,7 +120,7 @@ class Controller {
     static deleteData(req, res) {
         const idInput = req.params.id
 
-        Members.destroy({
+        Member.destroy({
           where: {
             id: idInput
           }

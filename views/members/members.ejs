@@ -19,7 +19,7 @@
 			<br><br><br>
 			<a href="/">HOME</a>
 			<br><br><br>
-			<a href="/admins/add">ADD</a>
+			<a href="/members/add">ADD</a>
 		</ul>
 	</div>
 	
@@ -29,20 +29,25 @@
 			<table border="1">
 				<tr>
 					<th width="5%">ID</th>
-					<th>NAMA</th>
-					<th>ALAMAT</th>
+					<th>Name</th>
+					<th>address</th>
+					<th>Phone Number</th>
 					<th width="10%" colspan="2">Action</th>
 				</tr>
 		
 				<!-- Awal pemasukan data -->
-				<tr>
-					<td><center>1</center></td>
-					<td></td> <!-- data NAMA -->
-					<td></td> <!-- data ALAMAT-->
-					<td>Edit</td>
-					<td>Delete</td>
-				</tr>
-				<!-- Akhir pemasukan data -->
+				<% listMembers.forEach(el => { %>
+
+					<tr>
+						<td><center><%= el.id %></center></td>
+						<td><%= el.name %></td> <!-- data NAMA -->
+						<td><%= el.address %></td> <!-- data ALAMAT-->
+						<td><%= el.phone_number %></td> <!-- data ALAMAT-->
+						<td><a href="/members/edit/<%= el.id %>">Edit</a></td>
+						<td><a href="/members/delete/<%= el.id %>">Delete</a></td>
+					</tr>
+					<!-- Akhir pemasukan data -->
+				<% }) %>
 
 			</table>
 		</center>
