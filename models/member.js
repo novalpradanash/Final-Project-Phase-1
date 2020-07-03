@@ -23,5 +23,17 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Member',
   });
+  Member.addHook('beforeCreate', (instance, options) => {
+    instance.phone_number = instance.phone_number.split('')
+
+    if (instance.phone_number[0] !== '0') {
+      if (instance.phone_number[0] === '+') {
+        instance.phone_number = '0'+ instance.phone_number.slice(3).join('')
+      }
+      else {
+        instance.phone_number = '0'+ instance.phone_number.slice(2)
+      }
+    }
+  })
   return Member;
 };
