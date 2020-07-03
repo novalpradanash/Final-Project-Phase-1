@@ -41,19 +41,6 @@ class Controller {
         })
         .catch(err => res.send(err))
 
-        
-
-        //bandingin passwordnya
-
-        //jika password benar
-            //redirect ke halaman awal
-        //jika password salah
-            //redirect login page
-
-        
-
-        
-
     }
 
     static getRegisterAdmin ( req, res ) {
@@ -84,7 +71,7 @@ class Controller {
 
     static getLogoutAdmin ( req, res ) {
         req.session.destroy()
-        res.redirect('login')
+        res.redirect('/admins/login')
     }
 
 }
