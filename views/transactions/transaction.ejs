@@ -18,6 +18,8 @@
 		<ul>
 			<br><br><br>
 			<a href="/">HOME</a>
+			<br><br><br>
+			<a href="/transactions/add">ADD TRANSACTION</a>
 		</ul>
 	</div>
 	
@@ -28,18 +30,18 @@
 				<table border="1">
 					<tr>
 						<th width="5%">NO</th>
-						<th>Books ID</th>
-						<th>Members ID</th>
+						<th>Book Name</th>
+						<th>Member Name</th>
 						<th>Borrowed Date</th>
 						<th width="10%" colspan="2">Action</th>
 					</tr>
 					
-					<% listTransaction.forEach(el => { %>
+					<% listTransaction.forEach((el, i) => { %>
 
 						<tr>
-							<td><center><%= el.id %></center></td>
-							<td><%= el.BookId %></td>
-							<td><%= el.MemberId %></td>
+							<td><center> <%= i + 1%></center></td>
+							<td><%= el.Book.name %></td>
+							<td><%= el.Member.name %></td>
 							<td><%= el.borrowed_date %></td>
 							<td><a href="/members/detail/<%= el.id %>">Edit</a></td>
 							<td><a href="/members/delete/<%= el.id %>">Delete</a></td>

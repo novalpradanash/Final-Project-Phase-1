@@ -17,42 +17,55 @@
 	<div class="samping">
 		<ul>
 			<br><br><br>
-			<a href="../admin.html">HOME</a>
+			<a href="/">HOME</a>
 			<br><br><br>
-			<a href="transaksi.html">KEMBALI</a>
+			<a href="/transactions">KEMBALI</a>
 		</ul>
 	</div>
 	
 	<div class="isi">
 		<center>
 			<h3>Tambah Transaksi Peminjaman</h3>
-			<form action="#">
+			<form action="/transactions/add" method="POST">
 				<table>
 					<tr>
-						<td>Nama Peminjam</td>
+						<td>Members Name</td> <!-- butuh data members -->
 						<td>:</td>
-						<td><input type="text" name="peminjam"></td>
+
+						<td>
+							<select name="MemberId" id="MemberId">
+								<% dataMembers.forEach(el => { %>  
+									<option value="<%= el.id %>"><%= el.name %></option>
+								<% }) %>
+							</select>
+						</td>
 					</tr>
 					
 					<tr>
-						<td>Buku</td>
+						<td>Buku</td> <!-- butuh data books -->
 						<td>:</td>
-						<td><input type="text" name="buku"></td>
+						<td>
+							<select name="BookId" id="BookId">
+								<% dataBooks.forEach(el => { %>  
+									<option value="<%= el.id %>"><%= el.name %></option>
+								<% }) %>
+							</select>
+						</td>
 					</tr>
 					
 					<tr>
 						<td>Tanggal Pinjam</td>
 						<td>:</td>
-						<td><input type="text" name="tgl_pinjam"></td>
+						<td><input type="date" name="borrowed_date"></td>
 					</tr>
 					
-					<tr>
+					<!-- <tr>
 						<td>Tanggal Kembali</td>
 						<td>:</td>
 						<td><input type="text" name="tgl_kembali"></td>
-					</tr>
+					</tr> -->
 					
-					<tr>
+					<!-- <tr>
 						<td>Status</td>
 						<td>:</td>
 						<td>
@@ -60,7 +73,7 @@
 								<option value="Sedang Meminjam">Sedang Meminjam</option>
 								<option value="Sudah Mengembalikan">Sudah Mengembalikan</option>
 						</td>
-					</tr>
+					</tr> -->
 					
 					<tr>
 						<td></td><td></td>
