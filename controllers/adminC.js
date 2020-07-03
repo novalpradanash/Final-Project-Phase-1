@@ -14,7 +14,13 @@ class Controller {
         }
     }
     static getLoginAdmin ( req, res ) {
-        res.render('admins/login')
+        
+        if (!req.session.isLoggedIn) {
+            res.render('admins/login')
+        }
+        else {
+            res.redirect('/')
+        }
     }
 
     static postLoginAdmin ( req, res ) {
